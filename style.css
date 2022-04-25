@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+
+
+header{
+    border: 3px groove rgba(88, 87, 87, 0.705);
+    background-color: grey;
+    font-family: fantasy;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+nav{
+    border: 3px groove rgba(88, 87, 87, 0.705);
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+}
+
+body{
+    background-image: url(assets/metal-texture-4331005_1280.webp);
+    background-size: cover; 
+}
+
+.img-port{
+    width: 100%;
+}
+
+.img-port2{
+    width: 100%;
+}
+
+.pag-1{
+    margin-top: 100px;
+}
+
+.pag-2{
+    margin-top: 100px;
+}
+
+.pag-3{
+    margin-top: 400px;
+}
+
+.pag-4{
+    margin-top: 350px;
+}
+
+.imglit{
+    height: 650px;
+    border: solid 2px black;
+}
+
+.article-me{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap:nowrap;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(1, 200px);
+    grid-template-areas: 
+    "img-me h3-me";
+}
+
+.h3-me{
+    margin-right: 800px;
+    width: 420px;
+    margin-top: 120px;
+    line-height: 50px;
+    border: 2px groove rgb(0, 48, 92);
+    background-color: grey;
+    border-radius: 25px;
+    padding: 30px 0px 300px 40px;
+}
+
+
+.grid-container{
+    display: flex;
+    justify-items:center;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 25%);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas: 
+    "pag-1 pag-2"
+    "pag-3 pag-4"
+    ;
+}
+
+.pag-1{
+    grid-area: pag-1; 
+    color: black;
+}
+
+
+.pag-2{
+    grid-area: pag-2;
+    color: black;
+}
+
+.pag-3{
+    grid-area: pag-3;
+    color: black;
+}
+
+.pag-4{
+    grid-area: pag-4;
+    color: black;
+}
+
+
+
+@media screen and (max-width: 1024px){
+    grid-container{
+        display: grid;
+
+        grid-template-columns: repeat(1, 25%);
+        grid-template-rows: repeat(4, 200px);
+        grid-template-areas: 
+        "pag-1"
+        "pag-2"
+        "pag-3"
+        "pag-4";
+    }
+    .pag-1{
+        grid-area: pag-1; 
+        background-color: lightgray;
+    }
+    
+    .pag-2{
+        grid-area: pag-2;
+        background-color: lightgray;
+    }
+    
+    .pag-3{
+        grid-area: pag-3;
+        background-color: lightgray;
+    }
+    
+    .pag-4{
+        grid-area: pag-4;
+        background-color: lightgray;
+    }
+    
+    .footer-padre{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .noticia-3{
+        display: none;
+    }
+
+    article-me{
+        display: grid;
+        grid-template-columns: repeat(1, 50%);
+        grid-template-rows: repeat(1, 200px);
+        grid-template-areas: 
+        "img-me"
+        "h3-me";
+    }
+    .img-me{
+        grid-area: img-me;
+    }
+
+    .h3-me{
+        grid-area: h3-me;
+    }
+}
